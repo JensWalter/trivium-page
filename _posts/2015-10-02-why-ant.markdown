@@ -1,0 +1,24 @@
+---
+layout: post
+title:  "Why ant?"
+date:   2015-10-02 18:13:54
+category: platform
+---
+I was looking for the build technology for the trivium project and could easily narrow it down to the usual suspect (usual for Java projects).
+
+So there was Maven, Gradle and Ant.
+
+I'm not going into detail on what each of those frameworks can do and cannot do, because there are plenty of other resources out there which do a good job comparing those frameworks.
+
+First off, since the project is hosted on github the obvious choice for CI was travis-ci. This service is pretty well known and seems to cover what is necessary for the job.
+
+All the above mentioned technologies are support by travis. So this was the first and most important criteria.
+After that I tried to figure out the state of the client side.
+
+Since I'm developing in intelliJ I was looking for something that is natively supported in that environment. In here we have Maven and Ant. Gradle is also support, but only through plugins.
+
+Second stop was eclipse. Here we have again Ant support out-of-the-box and gradle and maven support as plugin.
+
+To be really IDE independent I had to do stuff in Ant. This would be the only technology which has support anywhere, cloud and on-premise.
+
+So Ant it is.

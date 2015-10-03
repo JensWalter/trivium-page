@@ -1,0 +1,10 @@
+# Site settings
+title: trivium.io
+email: info@trivium.io
+description: > # this means to ignore newlines until "baseurl:"
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://www.trivium.io" # the base hostname & protocol for your site
+github_username:  trivium-io
+
+# Build settings
+markdown: kramdown

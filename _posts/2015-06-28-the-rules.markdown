@@ -1,0 +1,15 @@
+---
+layout: post
+title:  "the rules"
+date:   2015-06-28 20:17:54
+category: platform
+---
+### There exist only 3 types of object
+
+* types
+* bindings
+* tasks
+
+### There is no configuration - just code.
+
+### All persistent data must exist typed.

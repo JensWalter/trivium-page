@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body style="height:100vh;">
+    <div id="world" style="height:100%;">
+      <div style="display:flex;flex-direction:column;height:100%;">
+      {% include header.html %}
+
+      {{ content }}
+      </div>
+    </div>
+  </body>
+
+</html>

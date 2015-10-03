@@ -1,0 +1,67 @@
+---
+layout: startpage
+title: information processing made simpler
+---
+
+<div class="home" style="display:flex;flex-direction:column;height:100%;">
+<style>
+.box {border: 1px solid black;flex: 1; min-width:50px;padding:5px;}
+.box_header {text-align:center; margin-top:10px; margin-bottom:10px; font-size:1.5em; font-weight:600;}
+.box_entry {margin-left:10px; margin-right:10px; margin-top:10px; border:1px dashed grey; padding:3px;border-radius:10px; background-color: #ffffff;}
+.container {display: flex; flex-flow: row wrap; flex-wrap: wrap; justify-content: space-around; align-content:stretch; flex-direction: row; flex-grow:2;padding: 4px;}
+.bottom_entry {display:flex;align-items:center;justify-content:center;margin-left:10px;margin-right:5px;margin-top:3px;margin-bottom:3px;border:1px dashed grey;padding-top:3px;padding-bottom:3px;padding-left:8px;padding-right:8px;border-radius:5px;}
+</style>
+  <div class="container">
+    <div class="box" style="background-color:#ffeeee;">
+      <div class="box_header">binding</div>
+      {% for post in site.posts %}
+      {% if post.category == 'binding' %}
+      <a href='{{post.url}}'><div class='box_entry'>{{post.title}}</div></a>
+      {% endif %}
+      {% endfor %}
+    </div>
+    <div style="flex:1;min-width:7px;max-width:7px;"></div>
+    <div class="box" style="background-color:#eeffee;">
+      <div class="box_header">type</div>
+      {% for post in site.posts %}
+      {% if post.category == 'type' %}
+      <a href='{{post.url}}'><div class='box_entry'>{{post.title}}</div></a>
+      {% endif %}
+      {% endfor %}
+    </div>
+    <div style="flex:1;min-width:7px;max-width:7px;"></div>
+    <div class="box" style="background-color:#eeeeff;">
+      <div class="box_header">task</div>
+      {% for post in site.posts %}
+      {% if post.category == 'task' %}
+      <a href='{{post.url}}'><div class='box_entry'>{{post.title}}</div></a>
+      {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class='container' style='max-height:150px;'>
+    <div class='box'>
+      {% for post in site.posts %}
+      {% if post.category == 'platform' %}
+      <a href='{{post.url}}'><div class="box_entry" style="float:left;">{{post.title}}</div></a>
+      {% endif %}
+      {% endfor %}
+
+
+    </div>
+  </div>
+
+  <div style="display:flex;flex-direction:row;justify-content:space-around;">
+    <div class="bottom_entry">
+      <a href="{{ "/feed.xml" | prepend: site.baseurl }}">rss feed</a>
+    </div>
+    <div class="bottom_entry">
+      <a href="https://github.com/trivium-io">I'm in, where is the repository?</a>
+    </div>
+
+    <div class="bottom_entry">
+      <a href="{{ "/blog.html" | prepend: site.baseurl }}">blog</a>
+    </div>
+  </div>
+</div>
